@@ -1,0 +1,166 @@
+/* CSS específico da página inicial */
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #ffffff 15%, #de50ba 60%, #31a7d1 90%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #222;
+}
+
+.navbar {
+    background: linear-gradient(133deg, #fff13d, #ffffff) !important;
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link {
+    color: #000000 !important;
+    font-weight: 500;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    color: #de50ba !important;
+}
+
+.navbar-brand img {
+    object-fit: contain;
+    margin-right: 8px;
+}
+
+.hero {
+    padding: 100px 20px;
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.95),
+        rgba(222, 80, 186, 0.75),
+        rgba(49, 167, 209, 0.75)
+    );
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #222;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+}
+
+.btn-primary {
+    background-color: #de50ba;
+    border-color: #de50ba;
+}
+
+.btn-primary:hover {
+    background-color: #c83da5;
+    border-color: #c83da5;
+}
+
+.btn-success {
+    background-color: #25d366;
+    border-color: #25d366;
+}
+
+.btn-success:hover {
+    background-color: #1ebe5d;
+    border-color: #1ebe5d;
+}
+
+section {
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+.bg-light {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+}
+
+.card-img-top {
+    height: 230px;
+    object-fit: cover;
+}
+
+.card-title {
+    font-weight: 600;
+}
+
+footer.bg-dark {
+    background: linear-gradient(133deg, #fff13d, #ffffff) !important;
+    margin-top: auto;
+    width: 100%;
+}
+
+footer .mb-0 {
+    color: #000000;
+}
+
+.footspan {
+    color: #000000 !important;
+}
+
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background: rgba(255, 255, 255, 0.92);
+        border-radius: 12px;
+        margin-top: 12px;
+        padding: 10px 12px;
+    }
+
+    .navbar-nav {
+        width: 100%;
+        gap: 6px;
+    }
+
+    .navbar-nav .nav-item {
+        width: 100%;
+    }
+
+    .navbar-nav .nav-link {
+        display: block;
+        width: 100%;
+        padding: 10px 12px;
+        border-radius: 8px;
+    }
+
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-link.active {
+        background: rgba(222, 80, 186, 0.12);
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar.navbar-dark .navbar-toggler {
+        background-color: #000000 !important;
+        border: 2px solid #000000 !important;
+        border-radius: 8px;
+        padding: 0.4rem 0.55rem;
+    }
+
+    .navbar.navbar-dark .navbar-toggler .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255,255,255,1%29' stroke-linecap='round' stroke-width='2.5' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+}

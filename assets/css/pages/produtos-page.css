@@ -1,29 +1,29 @@
+/* CSS específico da página de Produtos */
+html {
+    height: 100%;
+}
+
 body {
     margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     font-family: Arial, Helvetica, sans-serif;
     color: #222;
-
-    background:linear-gradient(135deg, #ffffff 15%, #de50ba 60%, #31a7d1 90%);
-
-    min-height: 100vh;
+    background: linear-gradient(135deg, #ffffff 15%, #de50ba 60%, #31a7d1 90%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .navbar {
-    background: linear-gradient(
-        133deg,
-        #ffffff,
-        #fff13d
-    ) !important;
-
+    background: linear-gradient(133deg, #ffffff, #fff13d) !important;
     padding: 10px 0;
-
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
 }
 
 .navbar-brand {
     display: flex;
     align-items: center;
-
     color: #000000 !important;
     font-size: 1.4rem;
     font-weight: 700;
@@ -32,27 +32,19 @@ body {
 .navbar-brand img {
     width: 50px;
     height: 50px;
-
     object-fit: contain;
-
     margin-right: 8px;
 }
 
 .navbar .nav-link {
     color: #000000 !important;
-
     font-weight: 500;
-
     margin-left: 8px;
-
-    transition:
-        color 0.3s ease,
-        transform 0.3s ease;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .navbar .nav-link:hover {
     color: #de50ba !important;
-
     transform: translateY(-2px);
 }
 
@@ -61,20 +53,26 @@ body {
     font-weight: 700;
 }
 
-
-/* Botão do menu no celular */
-
-.navbar-toggler {
-    border: 2px solid #000000;
+.navbar.navbar-dark .navbar-toggler {
+    background-color: #000000 !important;
+    border: 2px solid #000000 !important;
+    border-radius: 8px;
+    padding: 0.4rem 0.55rem;
 }
 
+.navbar.navbar-dark .navbar-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255,255,255,1%29' stroke-linecap='round' stroke-width='2.5' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+    width: 1.5rem;
+    height: 1.5rem;
+}
 
-.navbar-toggler:focus {
-    box-shadow: 0 0 0 3px rgba(222, 80, 186, 0.25);
+.navbar.navbar-dark .navbar-toggler:focus {
+    box-shadow: 0 0 0 3px rgba(222, 80, 186, 0.25) !important;
 }
 
 main {
     min-height: calc(100vh - 150px);
+    flex: 1;
 }
 
 main section {
@@ -84,49 +82,31 @@ main section {
 
 main h1 {
     color: #222;
-
     font-size: 2.8rem;
     font-weight: 700;
-
     text-align: center;
-
     margin-bottom: 50px !important;
-
     text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.08);
 }
 
 .card {
     height: 100%;
-
     border: none;
     border-radius: 18px;
-
     overflow: hidden;
-
     background-color: rgba(255, 255, 255, 0.95);
-
-    box-shadow:
-        0 6px 20px rgba(0, 0, 0, 0.15);
-
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
-
-/* Efeito qunado passa o mouse */
 
 .card:hover {
     transform: translateY(-8px);
-
-    box-shadow:
-        0 14px 30px rgba(0, 0, 0, 0.22);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.22);
 }
 
 .card-img-top {
     width: 100%;
     height: 260px;
-
     object-fit: cover;
     display: block;
     transition: transform 0.4s ease;
@@ -144,7 +124,6 @@ main h1 {
 
 .card h2 {
     color: #222;
-
     font-size: 1.25rem;
     font-weight: 700;
     margin-bottom: 12px;
@@ -161,7 +140,6 @@ main h1 {
 .card strong {
     display: block;
     color: #de50ba;
-
     font-size: 1.25rem;
     font-weight: 700;
     margin-top: auto;
@@ -169,7 +147,6 @@ main h1 {
 
 .badge {
     width: fit-content;
-
     padding: 7px 12px;
     border-radius: 20px;
     font-size: 0.75rem;
@@ -184,27 +161,50 @@ main h1 {
     background-color: #31a7d1 !important;
 }
 
-
 footer {
-    background: linear-gradient(
-        133deg,
-        #fff13d,
-        #ffffff
-    ) !important;
-
+    background: linear-gradient(133deg, #fff13d, #ffffff) !important;
+    margin-top: auto;
+    width: 100%;
     font-weight: 500;
-    box-shadow:
-        0 -3px 12px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 -3px 12px rgba(0, 0, 0, 0.08);
 }
-#footspan{
+
+#footspan {
     color: #000000;
     font-style: italic;
 }
 
-   /* RESPONSIVIDADE */
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background: rgba(255, 255, 255, 0.92);
+        border-radius: 12px;
+        margin-top: 12px;
+        padding: 10px 12px;
+    }
+
+    .navbar-nav {
+        width: 100%;
+        gap: 6px;
+    }
+
+    .navbar-nav .nav-item {
+        width: 100%;
+    }
+
+    .navbar-nav .nav-link {
+        display: block;
+        width: 100%;
+        padding: 10px 12px;
+        border-radius: 8px;
+    }
+
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-link.active {
+        background: rgba(222, 80, 186, 0.12);
+    }
+}
 
 @media (max-width: 576px) {
-
     main section {
         padding-top: 45px !important;
         padding-bottom: 45px !important;
@@ -212,7 +212,6 @@ footer {
 
     main h1 {
         font-size: 2rem;
-
         margin-bottom: 35px !important;
     }
 
@@ -235,5 +234,4 @@ footer {
     .card strong {
         font-size: 1.15rem;
     }
-
 }

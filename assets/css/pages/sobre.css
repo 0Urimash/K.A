@@ -1,0 +1,90 @@
+/* CSS específico da página Sobre */
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #ffffff 15%, #de50ba 60%, #31a7d1 90%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #222;
+}
+
+.navbar {
+    background: linear-gradient(133deg, #fff13d, #ffffff) !important;
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link {
+    color: #000000 !important;
+    font-weight: 500;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    color: #de50ba !important;
+}
+
+.navbar-brand img {
+    object-fit: contain;
+    margin-right: 8px;
+}
+
+section {
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+footer.bg-dark {
+    background: linear-gradient(133deg, #fff13d, #ffffff) !important;
+    margin-top: auto;
+    width: 100%;
+}
+
+footer .mb-0 {
+    color: #000000;
+}
+
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background: rgba(255, 255, 255, 0.92);
+        border-radius: 12px;
+        margin-top: 12px;
+        padding: 10px 12px;
+    }
+
+    .navbar-nav {
+        width: 100%;
+        gap: 6px;
+    }
+
+    .navbar-nav .nav-item {
+        width: 100%;
+    }
+
+    .navbar-nav .nav-link {
+        display: block;
+        width: 100%;
+        padding: 10px 12px;
+        border-radius: 8px;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar.navbar-dark .navbar-toggler {
+        background-color: #000000 !important;
+        border: 2px solid #000000 !important;
+        border-radius: 8px;
+        padding: 0.4rem 0.55rem;
+    }
+
+    .navbar.navbar-dark .navbar-toggler .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255,255,255,1%29' stroke-linecap='round' stroke-width='2.5' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+}
