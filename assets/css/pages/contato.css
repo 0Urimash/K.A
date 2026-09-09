@@ -43,10 +43,20 @@ footer.bg-dark {
     background: linear-gradient(133deg, #fff13d, #ffffff) !important;
     margin-top: auto;
     width: 100%;
+
 }
 
 footer .mb-0 {
     color: #000000;
+}
+
+footer .footspan,
+footer a,
+footer a:link,
+footer a:visited,
+footer a:hover,
+footer a:focus {
+    color: #000000 !important;
 }
 
 @media (max-width: 991px) {

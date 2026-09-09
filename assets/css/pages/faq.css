@@ -49,6 +49,15 @@ footer .mb-0 {
     color: #000000;
 }
 
+footer .footspan,
+footer a,
+footer a:link,
+footer a:visited,
+footer a:hover,
+footer a:focus {
+    color: #000000 !important;
+}
+
 @media (max-width: 991px) {
     .navbar-collapse {
         background: rgba(255, 255, 255, 0.92);
